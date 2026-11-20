@@ -39,7 +39,13 @@ Dev-сервер Webpack слушает `http://127.0.0.1:3000`.
 npm run build
 ```
 
-Production-сборка попадает в каталог `dist/`.
+Production-сборка попадает в каталог `dist/`. В production пути к скриптам, стилям и фону относительные, поэтому страница открывается и из корня сайта, и из подкаталога GitHub Pages.
+
+## GitHub Pages
+
+Публикация настроена в `.github/workflows/pages.yml`. При пуше в `main` Actions ставит зависимости, выполняет `npm run build` и выкладывает каталог `dist`.
+
+В настройках репозитория на GitHub один раз выберите **Settings → Pages → Build and deployment → Source: GitHub Actions**. После первого успешного запуска сайт будет доступен по адресу `https://<пользователь>.github.io/<репозиторий>/`.
 
 ## Тесты
 

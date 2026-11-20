@@ -19,7 +19,7 @@ module.exports = (_env, argv) => {
       cssChunkFilename: isProduction
         ? 'css/[name].[contenthash:8].css'
         : 'css/[name].css',
-      publicPath: '/',
+      publicPath: isProduction ? 'auto' : '/',
       clean: true,
     },
     experiments: {
