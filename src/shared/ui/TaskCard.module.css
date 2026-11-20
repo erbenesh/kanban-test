@@ -1,0 +1,130 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: clamp(8px, calc(8px + (100vw - 768px) * 8 / 672), 16px);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+
+.overdueCard {
+  border-color: #fc3639;
+}
+
+.dragging {
+  border-color: #0184cf;
+  opacity: 0.72;
+  cursor: grabbing;
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: #0184cf;
+}
+
+.overdueCard:hover,
+.overdueCard:focus-within {
+  border-color: #fc3639;
+}
+
+.overdueCard.dragging,
+.overdueCard.dragging:hover,
+.overdueCard.dragging:focus-within {
+  border-color: #0184cf;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, calc(8px + (100vw - 768px) * 8 / 672), 16px);
+  align-items: flex-start;
+  margin: 0;
+}
+
+.label {
+  flex: 0 0 auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.value {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.87);
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 999px) {
+  .label {
+    order: 1;
+  }
+
+  .actions {
+    order: 2;
+  }
+
+  .value {
+    flex-basis: 100%;
+    order: 3;
+  }
+}
+
+.overdue {
+  color: rgba(252, 54, 57, 0.6);
+}
+
+.actions {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.confirm {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.card:hover .iconButton,
+.card:focus-within .iconButton {
+  opacity: 1;
+}
+
+.glyph {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.confirmGlyph {
+  display: block;
+  width: 28px;
+  height: 28px;
+}

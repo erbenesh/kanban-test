@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid #0184cf;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  min-width: 0;
+}
+
+.label {
+  flex: 0 0 auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.field {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 22px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.87);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+}
+
+.field:focus {
+  border-color: #0184cf;
+  outline: none;
+}
+
+.error {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: rgba(252, 54, 57, 0.87);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.action {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.glyph {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
