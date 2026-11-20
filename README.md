@@ -45,7 +45,7 @@ Production-сборка попадает в каталог `dist/`. В productio
 
 Публикация настроена в `.github/workflows/pages.yml`. При пуше в `main` Actions ставит зависимости, выполняет `npm run build` и выкладывает каталог `dist`.
 
-В настройках репозитория на GitHub один раз выберите **Settings → Pages → Build and deployment → Source: GitHub Actions**. После первого успешного запуска сайт будет доступен по адресу `https://<пользователь>.github.io/<репозиторий>/`.
+В настройках репозитория на GitHub один раз выберите **Settings → Pages → Build and deployment → Source: GitHub Actions**. Сайт опубликован по адресу https://erbenesh.github.io/kanban-test/.
 
 ## Тесты
 
